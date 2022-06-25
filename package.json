@@ -1,0 +1,24 @@
+{
+  "name": "social-media-icons",
+  "version": "0.0.0",
+  "description": "SVG files for social media icons.",
+  "scripts": {
+    "build": "svgo -f ./figma/icon -o ./icons"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joaopalmeiro/social-media-icons.git"
+  },
+  "author": "João Palmeiro",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/joaopalmeiro/social-media-icons/issues"
+  },
+  "homepage": "https://github.com/joaopalmeiro/social-media-icons#readme",
+  "devDependencies": {
+    "svgo": "^2.8.0"
+  },
+  "files": [
+    "icons/"
+  ]
+}

@@ -2,7 +2,14 @@ module.exports = {
   multipass: true,
 
   plugins: [
-    "preset-default",
+    {
+      name: "preset-default",
+      params: {
+        overrides: {
+          removeViewBox: false,
+        },
+      },
+    },
 
     // Source: https://github.com/svg/svgo/blob/main/plugins/removeRasterImages.js
     "removeRasterImages",

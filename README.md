@@ -12,7 +12,3 @@ SVG files for social media icons. For the sources and guidelines for these icons
 - `npm version minor` or `npm version patch` or `npm version major`.
 - `git push --follow-tags`.
 - Check [GitHub](https://github.com/joaopalmeiro/social-media-icons/actions) and [npm](https://www.npmjs.com/package/social-media-icons).
-
-## Notes
-
-- `npm install --save-dev svgo`.

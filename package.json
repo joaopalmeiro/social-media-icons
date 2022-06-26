@@ -1,6 +1,6 @@
 {
   "name": "social-media-icons",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "SVG files for social media icons.",
   "scripts": {
     "build": "svgo -f ./figma/icon -o ./icons",

@@ -14,3 +14,4 @@
 - https://publint.dev/ + https://publint.dev/rules
 - https://www.stefanjudis.com/today-i-learned/vs-code-supports-jsdoc-powered-type-checking/
 - https://github.com/svg/svgo#built-in-plugins
+- https://github.com/svg/svgo/pull/521

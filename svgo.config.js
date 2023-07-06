@@ -12,12 +12,12 @@ module.exports = {
           removeViewBox: false,
           // Source: https://github.com/svg/svgo/blob/master/plugins/sortAttrs.js
           sortAttrs: {
-            xmlnsOrder: "alphabetical",
+            xmlnsOrder: "front",
           },
           // Source: https://github.com/svg/svgo/blob/main/plugins/convertColors.js
-          convertColors: {
-            currentColor: true,
-          },
+          // convertColors: {
+          //   currentColor: true,
+          // },
         },
       },
     },
@@ -33,11 +33,27 @@ module.exports = {
     // Source: https://github.com/svg/svgo/blob/main/plugins/removeOffCanvasPaths.js
     "removeOffCanvasPaths",
 
-    // https://github.com/svg/svgo/blob/main/plugins/removeAttrs.js
+    // Source:
+    // - https://github.com/svg/svgo/blob/main/plugins/removeAttrs.js
+    // - https://github.com/lucide-icons/lucide/blob/main/icons/instagram.svg?short_path=e435f4b
     {
       name: "removeAttrs",
       params: {
-        attrs: "svg:fill:none",
+        // attrs: "svg:fill:none",
+        attrs: "fill",
+      },
+    },
+
+    // Source: https://github.com/svg/svgo/blob/main/plugins/addAttributesToSVGElement.js
+    {
+      name: "addAttributesToSVGElement",
+      params: {
+        attributes: [
+          {
+            fill: "currentColor",
+            // fill: "red",
+          },
+        ],
       },
     },
   ],

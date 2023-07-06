@@ -1,3 +1,5 @@
+// https://github.com/svg/svgo#built-in-plugins
+
 module.exports = {
   multipass: true,
 

@@ -3,8 +3,7 @@
   "version": "0.0.4",
   "description": "SVG files for social media icons.",
   "scripts": {
-    "build": "svgo -f ./figma/icon -o ./icons",
-    "versions": "node -v && npm -v"
+    "build": "svgo -f ./figma/icon -o ./icons"
   },
   "repository": {
     "type": "git",
@@ -16,14 +15,10 @@
     "url": "https://github.com/joaopalmeiro/social-media-icons/issues"
   },
   "homepage": "https://github.com/joaopalmeiro/social-media-icons#readme",
-  "devDependencies": {
-    "svgo": "^2.8.0"
-  },
   "files": [
     "icons/"
   ],
-  "volta": {
-    "node": "16.15.1",
-    "npm": "8.11.0"
+  "devDependencies": {
+    "svgo": "3.0.2"
   }
 }

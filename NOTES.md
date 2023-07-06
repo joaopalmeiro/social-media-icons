@@ -4,6 +4,10 @@
 - `volta pin node@16.15.1`
 - [svg-icon-library-starter](https://github.com/kreuzerk/svg-icon-library-starter) repo
 - https://github.com/svg/svgo/issues/1211
+- https://github.com/svg/svgo/issues/1092
+- https://github.com/googlefonts/picosvg:
+  - `pipx run picosvg figma/icon/dribbble.svg --output_file icons/dribbble.svg`
+  - `pipx run picosvg figma/icon/dribbble.svg --output_file figma/icon/dribbble.svg`
 - https://github.com/lucide-icons/lucide/blob/main/icons/instagram.svg?short_path=e435f4b
 - https://github.com/svg/svgo/releases/tag/v3.0.0
 - https://github.com/best-shot/svgo-config

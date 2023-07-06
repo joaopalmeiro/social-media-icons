@@ -44,4 +44,8 @@ npm version major
 git push --follow-tags
 ```
 
+or
+
+Create a tag on [GitHub Desktop](https://github.blog/2020-05-12-create-and-push-tags-in-the-latest-github-desktop-2-5-release/).
+
 Check [GitHub](https://github.com/joaopalmeiro/social-media-icons/actions) and [npm](https://www.npmjs.com/package/social-media-icons).

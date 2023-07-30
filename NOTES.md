@@ -8,6 +8,9 @@
 - https://github.com/googlefonts/picosvg:
   - `pipx run picosvg figma/icon/dribbble.svg --output_file icons/dribbble.svg`
   - `pipx run picosvg figma/icon/dribbble.svg --output_file figma/icon/dribbble.svg`
+  - `pipx run picosvg figma/icon/instagram.svg --output_file figma/icon/instagram.svg`
+  - `pipx run picosvg icons/instagram.svg --output_file instagram.svg`
+  - `pipx run picosvg --helpfull`
 - https://github.com/lucide-icons/lucide/blob/main/icons/instagram.svg?short_path=e435f4b
 - https://github.com/svg/svgo/releases/tag/v3.0.0
 - https://github.com/best-shot/svgo-config
@@ -15,3 +18,6 @@
 - https://www.stefanjudis.com/today-i-learned/vs-code-supports-jsdoc-powered-type-checking/
 - https://github.com/svg/svgo#built-in-plugins
 - https://github.com/svg/svgo/pull/521
+- https://github.com/oslllo/svg-fixer:
+  - `npx oslllo-svg-fixer -s icons/instagram.svg -d .`
+- https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/fill-rule

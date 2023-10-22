@@ -21,3 +21,4 @@
 - https://github.com/oslllo/svg-fixer:
   - `npx oslllo-svg-fixer -s icons/instagram.svg -d .`
 - https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/fill-rule
+- https://www.npmjs.com/package/svgo

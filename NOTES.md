@@ -47,6 +47,7 @@
 - https://vitepress.dev/guide/markdown#github-style-tables
 - https://vuejs.org/api/built-in-special-elements.html#slot
 - https://m3.material.io/styles/icons/designing-icons + https://m2.material.io/design/iconography/system-icons.html
+- https://docs.edg.io/guides/v7/sites_frameworks/getting_started/vitepress
 
 ## Commands
 

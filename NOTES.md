@@ -1,6 +1,5 @@
 # Notes
 
-- `npm install --save-dev svgo`
 - `volta pin node@16.15.1`
 - [svg-icon-library-starter](https://github.com/kreuzerk/svg-icon-library-starter) repo
 - https://github.com/svg/svgo/issues/1211
@@ -37,3 +36,28 @@
 - https://icones.js.org/
 - https://github.com/antfu/icones/issues/123 + https://github.com/antfu/icones/issues/43
 - https://iconify.design/
+- https://vitejs.dev/guide/features.html#static-assets
+- https://vuejs.org/api/built-in-directives.html#v-html
+- https://vuejs.org/guide/essentials/template-syntax.html#raw-html
+- https://stackoverflow.com/a/73678605 + https://developer.mozilla.org/en-US/docs/Web/HTML/Element/i
+- https://stackoverflow.com/a/76829708
+- https://vuejs.org/api/built-in-special-elements.html#component
+- https://vuejs.org/api/built-in-special-elements.html#template
+- https://bun.sh/docs/cli/add#dev
+- https://vitepress.dev/guide/markdown#github-style-tables
+- https://vuejs.org/api/built-in-special-elements.html#slot
+- https://m3.material.io/styles/icons/designing-icons + https://m2.material.io/design/iconography/system-icons.html
+
+## Commands
+
+```bash
+npm install --save-dev svgo
+```
+
+```bash
+npm install --save-dev vitepress
+```
+
+```bash
+npx vitepress init
+```

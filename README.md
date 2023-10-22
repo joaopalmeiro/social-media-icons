@@ -40,10 +40,6 @@ pipenv install --dev --skip-lock
 ```
 
 ```bash
-pipenv run python apply_picosvg.py
-```
-
-```bash
 pipenv run black apply_picosvg.py
 ```
 

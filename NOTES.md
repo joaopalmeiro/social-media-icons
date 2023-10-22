@@ -59,7 +59,7 @@ npm install --save-dev svgo
 ```
 
 ```bash
-npm install --save-dev vitepress
+npm install --save-dev vitepress npm-run-all
 ```
 
 ```bash

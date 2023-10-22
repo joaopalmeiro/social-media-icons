@@ -24,15 +24,15 @@ if __name__ == "__main__":
     OUTPUT_PATH.mkdir(parents=True, exist_ok=True)
 
     for icon_path in INPUT_PATH.glob("*.svg"):
-        print(icon_path)
         icon = SVG.parse(icon_path)
 
         processed_icon = icon.topicosvg(
             ndigits=SVG_EXPORT_PRECISION, allow_text=False, drop_unsupported=False
         )
-        # print(processed_icon)
 
         output_icon = processed_icon.tostring(pretty_print=True)
 
         with open(OUTPUT_PATH / icon_path.name, "w") as f:
             f.write(output_icon)
+
+        print(f"{icon_path} ✓")

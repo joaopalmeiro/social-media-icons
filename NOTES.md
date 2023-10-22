@@ -11,6 +11,10 @@
   - `pipx run picosvg figma/icon/instagram.svg --output_file figma/icon/instagram.svg`
   - `pipx run picosvg icons/instagram.svg --output_file instagram.svg`
   - `pipx run picosvg --helpfull`
+  - https://github.com/googlefonts/picosvg/blob/v0.22.1/tests/twemoji-lesotho-flag-nano.svg?short_path=9b1b159
+  - https://github.com/googlefonts/picosvg/blob/v0.22.1/tests/twemoji-lesotho-flag-before.svg?short_path=ab502b9
+  - https://github.com/googlefonts/picosvg/blob/v0.22.1/tests/fill-rule-evenodd-before.svg?short_path=ab502b9
+  - https://github.com/googlefonts/picosvg/blob/v0.22.1/tests/fill-rule-evenodd-after.svg?short_path=ab502b9
 - https://github.com/lucide-icons/lucide/blob/main/icons/instagram.svg?short_path=e435f4b
 - https://github.com/svg/svgo/releases/tag/v3.0.0
 - https://github.com/best-shot/svgo-config
@@ -22,3 +26,4 @@
   - `npx oslllo-svg-fixer -s icons/instagram.svg -d .`
 - https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/fill-rule
 - https://www.npmjs.com/package/svgo
+- https://github.com/googlefonts/picosvg/pull/54

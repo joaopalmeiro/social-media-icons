@@ -15,6 +15,7 @@
   - https://github.com/googlefonts/picosvg/blob/v0.22.1/tests/twemoji-lesotho-flag-before.svg?short_path=ab502b9
   - https://github.com/googlefonts/picosvg/blob/v0.22.1/tests/fill-rule-evenodd-before.svg?short_path=ab502b9
   - https://github.com/googlefonts/picosvg/blob/v0.22.1/tests/fill-rule-evenodd-after.svg?short_path=ab502b9
+  - https://github.com/googlefonts/picosvg/pull/54
 - https://github.com/lucide-icons/lucide/blob/main/icons/instagram.svg?short_path=e435f4b
 - https://github.com/svg/svgo/releases/tag/v3.0.0
 - https://github.com/best-shot/svgo-config
@@ -26,4 +27,13 @@
   - `npx oslllo-svg-fixer -s icons/instagram.svg -d .`
 - https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/fill-rule
 - https://www.npmjs.com/package/svgo
-- https://github.com/googlefonts/picosvg/pull/54
+- https://oh-vue-icons.js.org/
+- https://github.com/Renovamen/oh-vue-icons/blob/master/iconpacks/index.js
+- https://iconsax.io/ + https://github.com/lusaxweb/iconsax
+- https://vuesax.com/
+- https://github.com/lusaxweb/iconsax/tree/master/static/Iconsax/Svg/All
+- https://github.com/logicspark/awesome-vitepress-v1
+- https://vue-iconsax.onrender.com/ + https://www.npmjs.com/package/vue-iconsax
+- https://icones.js.org/
+- https://github.com/antfu/icones/issues/123 + https://github.com/antfu/icones/issues/43
+- https://iconify.design/

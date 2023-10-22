@@ -48,6 +48,9 @@
 - https://vuejs.org/api/built-in-special-elements.html#slot
 - https://m3.material.io/styles/icons/designing-icons + https://m2.material.io/design/iconography/system-icons.html
 - https://docs.edg.io/guides/v7/sites_frameworks/getting_started/vitepress
+- https://docs.brew.sh/FAQ#how-do-i-update-my-local-packages: `brew update` + `brew upgrade pyenv` + `pyenv --version`
+- https://github.com/pypa/pipenv/issues/5531
+- https://stackoverflow.com/questions/27472540/difference-between-and-in-bash
 
 ## Commands
 
@@ -61,4 +64,36 @@ npm install --save-dev vitepress
 
 ```bash
 npx vitepress init
+```
+
+```bash
+pipenv --rm
+```
+
+```bash
+rm -rf Pipfile Pipfile.lock
+```
+
+```bash
+pipenv --rm && rm -rf Pipfile Pipfile.lock
+```
+
+```bash
+pipenv install --skip-lock picosvg==0.22.1 && pipenv install --dev --skip-lock black==23.10.0
+```
+
+```bash
+pipenv --python $(cat .python-version)
+```
+
+```bash
+pipenv install --help
+```
+
+```bash
+pipenv run picosvg --helpfull
+```
+
+```bash
+cat figma/icon/dribbble.svg && pipenv run picosvg figma/icon/dribbble.svg
 ```

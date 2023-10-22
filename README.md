@@ -7,6 +7,8 @@ SVG files for social media icons. For the sources and guidelines for these icons
 
 ## Development
 
+### JS
+
 ```bash
 fnm install && fnm use && node --version
 ```
@@ -21,6 +23,28 @@ npm run build
 
 ```bash
 npm pack --dry-run
+```
+
+### Python
+
+```bash
+pyenv install && pyenv versions
+```
+
+```bash
+pip install pipenv && pipenv --version
+```
+
+```bash
+pipenv install --dev --skip-lock
+```
+
+```bash
+pipenv run python apply_picosvg.py
+```
+
+```bash
+pipenv run black apply_picosvg.py
 ```
 
 ## Deployment

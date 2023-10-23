@@ -1,0 +1,24 @@
+# https://github.com/joaopalmeiro/d3-extra-scale-chromatic/blob/main/.github/workflows/deploy-docs.yml
+
+name: Deploy documentation to Surge
+
+on:
+  push:
+    tags:
+      - "v*"
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v3
+        with:
+          node-version-file: ".nvmrc"
+      - run: npm install
+      - run: npm run docs:build
+      - run: npm install --global surge
+      - run: surge docs/.vitepress/dist https://social-media-icons.surge.sh/ --token ${{secrets.SURGE_TOKEN}}

@@ -3,6 +3,7 @@
 SVG files for social media icons. For the sources and guidelines for these icons, check the [Social Media Icons file](https://www.figma.com/community/file/1098022441810511046) (**v0.11.0**) on the Figma Community, please.
 
 - [Source code](https://github.com/joaopalmeiro/social-media-icons)
+- [Documentation](https://social-media-icons.surge.sh/)
 - [npm package](https://www.npmjs.com/package/social-media-icons)
 
 ## Development

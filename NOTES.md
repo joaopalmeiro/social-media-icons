@@ -51,6 +51,9 @@
 - https://docs.brew.sh/FAQ#how-do-i-update-my-local-packages: `brew update` + `brew upgrade pyenv` + `pyenv --version`
 - https://github.com/pypa/pipenv/issues/5531
 - https://stackoverflow.com/questions/27472540/difference-between-and-in-bash
+- https://fontawesome.com/docs/web/add-icons/upload-icons/prep-icons#exporting-svgs-from-design-software
+- https://github.com/svg/svgo/issues/171
+- https://github.com/svg/svgo/blob/v3.0.2/plugins/convertPathData.js#L99 (`floatPrecision = 3`)
 
 ## Commands
 

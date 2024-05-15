@@ -5,6 +5,7 @@ SVG files for social media icons. For the sources and guidelines for these icons
 - [Source code](https://github.com/joaopalmeiro/social-media-icons)
 - [Documentation](https://social-media-icons.surge.sh/)
 - [npm package](https://www.npmjs.com/package/social-media-icons)
+- [npm-stat](https://npm-stat.link/social-media-icons)
 
 ## Development
 

@@ -54,6 +54,10 @@
 - https://fontawesome.com/docs/web/add-icons/upload-icons/prep-icons#exporting-svgs-from-design-software
 - https://github.com/svg/svgo/issues/171
 - https://github.com/svg/svgo/blob/v3.0.2/plugins/convertPathData.js#L99 (`floatPrecision = 3`)
+- `editorNamespaces`:
+  - https://github.com/svg/svgo/blob/v3.0.3/plugins/_collections.js#L1926
+  - https://github.com/svg/svgo/blob/v3.3.2/plugins/_collections.js#L1974
+- https://svgo.dev/docs/plugins-api/
 
 ## Commands
 

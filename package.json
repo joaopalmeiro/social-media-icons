@@ -3,6 +3,10 @@
   "version": "0.3.1",
   "private": false,
   "description": "SVG files for social media icons.",
+  "keywords": [
+    "svg",
+    "icons"
+  ],
   "homepage": "https://github.com/joaopalmeiro/social-media-icons",
   "bugs": {
     "url": "https://github.com/joaopalmeiro/social-media-icons/issues"
@@ -36,7 +40,7 @@
     "npm-run-all2": "6.1.2",
     "publint": "0.2.7",
     "sort-package-json": "2.8.0",
-    "svgo": "3.0.2",
+    "svgo": "3.3.2",
     "vitepress": "1.0.0-rc.23"
   },
   "engines": {

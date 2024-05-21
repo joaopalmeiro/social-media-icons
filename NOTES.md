@@ -57,9 +57,17 @@
 - `editorNamespaces`:
   - https://github.com/svg/svgo/blob/v3.0.3/plugins/_collections.js#L1926
   - https://github.com/svg/svgo/blob/v3.3.2/plugins/_collections.js#L1974
-- https://svgo.dev/docs/plugins-api/
+- https://svgo.dev/
+  - https://svgo.dev/docs/plugins-api/
+  - https://svgo.dev/docs/preset-default/
+  - https://github.com/syntax-tree/xast
+  - https://github.com/simple-icons/simple-icons/blob/11.15.0/svgo.config.mjs:
+    - `{ 'addAttributesToSVGElement', params: { attributes: [{role: 'img', xmlns: 'http://www.w3.org/2000/svg'}], }, },`
 - https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-and-highlighting-code-blocks#fenced-code-blocks:
   - "To display triple backticks in a fenced code block, wrap them inside quadruple backticks."
+- https://github.com/edent/SuperTinyIcons
+- https://github.com/alrra/browser-logos
+- https://github.com/simple-icons/simple-icons/blob/11.15.0/package.json: `"keywords": [ "svg", "icons" ]`
 
 ## Commands
 
@@ -108,6 +116,10 @@ pipenv run picosvg --helpfull
 
 ```bash
 cat figma/icon/dribbble.svg && pipenv run picosvg figma/icon/dribbble.svg
+```
+
+```bash
+rm -rf node_modules/ && npm install
 ```
 
 ## Snippets
@@ -303,4 +315,69 @@ jobs:
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
+```
+
+### `svgo.config.js` file
+
+```js
+/**
+ * @type {import('svgo').Config}
+ */
+module.exports = {
+  multipass: true,
+
+  plugins: [
+    {
+      name: "preset-default",
+      params: {
+        overrides: {
+          removeViewBox: false,
+          // Source: https://github.com/svg/svgo/blob/master/plugins/sortAttrs.js
+          sortAttrs: {
+            xmlnsOrder: "front",
+          },
+          // Source: https://github.com/svg/svgo/blob/main/plugins/convertColors.js
+          // convertColors: {
+          //   currentColor: true,
+          // },
+        },
+      },
+    },
+
+    // Source: https://github.com/svg/svgo/blob/main/plugins/removeRasterImages.js
+    "removeRasterImages",
+    // Source: https://github.com/svg/svgo/blob/main/plugins/removeScriptElement.js
+    "removeScriptElement",
+    // Source: https://github.com/svg/svgo/blob/main/plugins/removeStyleElement.js
+    "removeStyleElement",
+    // Source: https://github.com/svg/svgo/blob/main/plugins/reusePaths.js
+    "reusePaths",
+    // Source: https://github.com/svg/svgo/blob/main/plugins/removeOffCanvasPaths.js
+    "removeOffCanvasPaths",
+
+    // Source:
+    // - https://github.com/svg/svgo/blob/main/plugins/removeAttrs.js
+    // - https://github.com/lucide-icons/lucide/blob/main/icons/instagram.svg?short_path=e435f4b
+    {
+      name: "removeAttrs",
+      params: {
+        // attrs: "svg:fill:none",
+        attrs: "fill",
+      },
+    },
+
+    // Source: https://github.com/svg/svgo/blob/main/plugins/addAttributesToSVGElement.js
+    {
+      name: "addAttributesToSVGElement",
+      params: {
+        attributes: [
+          {
+            fill: "currentColor",
+            // fill: "red",
+          },
+        ],
+      },
+    },
+  ],
+};
 ```

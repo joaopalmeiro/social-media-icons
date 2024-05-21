@@ -102,5 +102,18 @@ export default {
     },
     // https://svgo.dev/docs/plugins/removeNonInheritableGroupAttrs/
     "removeNonInheritableGroupAttrs",
+    // https://svgo.dev/docs/plugins/removeUselessStrokeAndFill/
+    {
+      name: "removeUselessStrokeAndFill",
+      params: {
+        stroke: true,
+        fill: true,
+        removeNone: true,
+      },
+    },
+    // https://svgo.dev/docs/plugins/removeViewBox/
+    // "removeViewBox",
+    // https://svgo.dev/docs/plugins/cleanupEnableBackground/
+    "cleanupEnableBackground",
   ],
 };

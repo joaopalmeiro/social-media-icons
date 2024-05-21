@@ -6,13 +6,12 @@ const DEFAULT_TRANSFORM_PRECISION = 5;
  */
 export default {
   // https://github.com/simple-icons/simple-icons/blob/11.15.0/svgo.config.mjs
+  // https://svgo.dev/docs/preset-default/
 
   multipass: true,
   eol: "lf",
 
   plugins: [
-    // https://svgo.dev/docs/preset-default/
-
     // https://svgo.dev/docs/plugins/removeDoctype/
     "removeDoctype",
     // https://svgo.dev/docs/plugins/removeXMLProcInst/
@@ -37,8 +36,8 @@ export default {
         spaces: true,
       },
     },
-    // https://svgo.dev/docs/plugins/mergeStyles/
-    "mergeStyles",
+    // https://svgo.dev/docs/plugins/mergeStyles/ (no need w/ removeStyleElement)
+    // "mergeStyles",
     // https://svgo.dev/docs/plugins/inlineStyles/
     {
       name: "inlineStyles",
@@ -47,13 +46,13 @@ export default {
         removeMatchedSelectors: true,
       },
     },
-    // https://svgo.dev/docs/plugins/minifyStyles/
-    {
-      name: "minifyStyles",
-      params: {
-        usage: true,
-      },
-    },
+    // https://svgo.dev/docs/plugins/minifyStyles/ (no need w/ removeStyleElement)
+    // {
+    //   name: "minifyStyles",
+    //   params: {
+    //     usage: true,
+    //   },
+    // },
     // https://svgo.dev/docs/plugins/cleanupIds/
     {
       name: "cleanupIds",
@@ -232,6 +231,63 @@ export default {
       name: "removeDesc",
       params: {
         removeAny: true,
+      },
+    },
+    // https://svgo.dev/docs/plugins/cleanupListOfValues/
+    {
+      name: "cleanupListOfValues",
+      params: {
+        floatPrecision: DEFAULT_FLOAT_PRECISION,
+        leadingZero: true,
+        defaultPx: true,
+        convertToPx: true,
+      },
+    },
+    // https://svgo.dev/docs/plugins/convertOneStopGradients/
+    "convertOneStopGradients",
+    // https://svgo.dev/docs/plugins/convertStyleToAttrs/
+    {
+      name: "convertStyleToAttrs",
+      params: {
+        keepImportant: false,
+      },
+    },
+    // https://svgo.dev/docs/plugins/removeDimensions/
+    // "removeDimensions",
+    // https://svgo.dev/docs/plugins/removeOffCanvasPaths/
+    "removeOffCanvasPaths",
+    // https://svgo.dev/docs/plugins/removeRasterImages/
+    "removeRasterImages",
+    // https://svgo.dev/docs/plugins/removeScriptElement/
+    "removeScriptElement",
+    // https://svgo.dev/docs/plugins/removeStyleElement/
+    "removeStyleElement",
+    // https://svgo.dev/docs/plugins/reusePaths/
+    "reusePaths",
+    // https://svgo.dev/docs/plugins/removeAttrs/
+    {
+      name: "removeAttrs",
+      params: {
+        attrs: "fill",
+      },
+    },
+    // https://svgo.dev/docs/plugins/addAttributesToSVGElement/
+    // https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/color
+    {
+      name: "addAttributesToSVGElement",
+      params: {
+        attributes: [
+          {
+            fill: "currentcolor",
+          },
+        ],
+      },
+    },
+    // https://svgo.dev/docs/plugins/removeXlink/
+    {
+      name: "removeXlink",
+      params: {
+        includeLegacy: true,
       },
     },
   ],

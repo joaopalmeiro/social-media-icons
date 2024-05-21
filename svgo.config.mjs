@@ -1,3 +1,6 @@
+const DEFAULT_FLOAT_PRECISION = 3;
+const DEFAULT_TRANSFORM_PRECISION = 5;
+
 /**
  * @type {import('svgo').Config}
  */
@@ -68,7 +71,7 @@ export default {
     {
       name: "cleanupNumericValues",
       params: {
-        floatPrecision: 3,
+        floatPrecision: DEFAULT_FLOAT_PRECISION,
         leadingZero: true,
         defaultPx: true,
         convertToPx: true,
@@ -115,5 +118,87 @@ export default {
     // "removeViewBox",
     // https://svgo.dev/docs/plugins/cleanupEnableBackground/
     "cleanupEnableBackground",
+    // https://svgo.dev/docs/plugins/removeHiddenElems/
+    {
+      name: "removeHiddenElems",
+      params: {
+        isHidden: true,
+        displayNone: true,
+        opacity0: true,
+        circleR0: true,
+        ellipseRX0: true,
+        ellipseRY0: true,
+        rectWidth0: true,
+        rectHeight0: true,
+        patternWidth0: true,
+        patternHeight0: true,
+        imageWidth0: true,
+        imageHeight0: true,
+        pathEmptyD: true,
+        polylineEmptyPoints: true,
+        polygonEmptyPoints: true,
+      },
+    },
+    // https://svgo.dev/docs/plugins/removeEmptyText/
+    {
+      name: "removeEmptyText",
+      params: {
+        text: true,
+        tspan: true,
+        tref: true,
+      },
+    },
+    // https://svgo.dev/docs/plugins/convertShapeToPath/
+    {
+      name: "convertShapeToPath",
+      params: {
+        convertArcs: true,
+      },
+    },
+    // https://svgo.dev/docs/plugins/convertEllipseToCircle/
+    "convertEllipseToCircle",
+    // https://svgo.dev/docs/plugins/moveElemsAttrsToGroup/
+    "moveElemsAttrsToGroup",
+    // https://svgo.dev/docs/plugins/moveGroupAttrsToElems/
+    "moveGroupAttrsToElems",
+    // https://svgo.dev/docs/plugins/collapseGroups/
+    "collapseGroups",
+    // https://svgo.dev/docs/plugins/convertPathData/
+    // https://github.com/svg/svgo/blob/v3.3.2/plugins/convertPathData.js
+    {
+      name: "convertPathData",
+      params: {
+        applyTransforms: true,
+        applyTransformsStroked: true,
+        straightCurves: true,
+        convertToQ: true,
+        lineShorthands: true,
+        convertToZ: true,
+        curveSmoothShorthands: true,
+        floatPrecision: DEFAULT_FLOAT_PRECISION,
+        transformPrecision: DEFAULT_TRANSFORM_PRECISION,
+        smartArcRounding: true,
+        removeUseless: true,
+        collapseRepeated: true,
+        utilizeAbsolute: true,
+        negativeExtraSpace: true,
+        forceAbsolutePath: false,
+      },
+    },
+    // https://svgo.dev/docs/plugins/convertTransform/
+    {
+      name: "convertTransform",
+      params: {
+        convertToShorts: true,
+        floatPrecision: DEFAULT_FLOAT_PRECISION,
+        transformPrecision: DEFAULT_TRANSFORM_PRECISION,
+        matrixToTransform: true,
+        shortTranslate: true,
+        shortScale: true,
+        shortRotate: true,
+        removeUseless: true,
+        collapseIntoOne: true,
+      },
+    },
   ],
 };

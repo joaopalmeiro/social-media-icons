@@ -5,14 +5,15 @@ SVG files for social media icons. For the sources and guidelines for these icons
 - [Source code](https://github.com/joaopalmeiro/social-media-icons)
 - [Documentation](https://social-media-icons.surge.sh/)
 - [npm package](https://www.npmjs.com/package/social-media-icons)
+- [Licenses](https://licenses.dev/npm/social-media-icons/0.3.1)
+- [Package Phobia](https://packagephobia.com/result?p=social-media-icons@0.3.1)
+- [npm trends](https://npmtrends.com/social-media-icons)
 - [npm-stat](https://npm-stat.link/social-media-icons)
 
 ## Development
 
-### JS
-
 ```bash
-fnm install && fnm use && node --version
+fnm install && fnm use && node --version && npm --version
 ```
 
 ```bash
@@ -20,73 +21,54 @@ npm install
 ```
 
 ```bash
+npm run lint
+```
+
+```bash
+npm run format
+```
+
+```bash
 npm run build
 ```
+
+## Deployment
+
+### Package
 
 ```bash
 npm pack --dry-run
 ```
 
-### Python
-
-```bash
-pyenv install && pyenv versions
-```
-
-```bash
-pip install pipenv && pipenv --version
-```
-
-```bash
-pipenv install --dev --skip-lock
-```
-
-```bash
-pipenv run black apply_picosvg.py
-```
-
-## Deployment
-
-Update the [Social Media Icons file](https://www.figma.com/community/file/1098022441810511046) version in the README file (if necessary).
-
 ```bash
 npm version patch
 ```
-
-or
 
 ```bash
 npm version minor
 ```
 
-or
-
 ```bash
 npm version major
 ```
 
-```bash
-git push --follow-tags
-```
-
-or
+- Update the [Social Media Icons file](https://www.figma.com/community/file/1098022441810511046) version at the top (if necessary).
+- Update the version in the `Licenses` and `Package Phobia` links at the top.
 
 ```bash
-npm version --no-git-tag-version patch
+echo "v$(npm pkg get version | tr -d \")" | pbcopy
 ```
 
-or
+- Commit and push changes.
+- Create a tag on [GitHub Desktop](https://github.blog/2020-05-12-create-and-push-tags-in-the-latest-github-desktop-2-5-release/).
+- Check [GitHub](https://github.com/joaopalmeiro/social-media-icons/tags).
 
 ```bash
-npm version --no-git-tag-version minor
+npm login
 ```
-
-or
 
 ```bash
-npm version --no-git-tag-version major
+npm publish
 ```
 
-Create a tag on [GitHub Desktop](https://github.blog/2020-05-12-create-and-push-tags-in-the-latest-github-desktop-2-5-release/).
-
-Check [GitHub](https://github.com/joaopalmeiro/social-media-icons/actions) and [npm](https://www.npmjs.com/package/social-media-icons).
+- Check [npm](https://www.npmjs.com/package/social-media-icons).

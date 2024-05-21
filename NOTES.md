@@ -58,15 +58,20 @@
   - https://github.com/svg/svgo/blob/v3.0.3/plugins/_collections.js#L1926
   - https://github.com/svg/svgo/blob/v3.3.2/plugins/_collections.js#L1974
 - https://svgo.dev/docs/plugins-api/
+- https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-and-highlighting-code-blocks#fenced-code-blocks:
+  - "To display triple backticks in a fenced code block, wrap them inside quadruple backticks."
 
 ## Commands
 
 ```bash
-npm install --save-dev svgo
-```
-
-```bash
-npm install --save-dev vitepress npm-run-all
+npm install -D \
+npm-package-json-lint \
+npm-package-json-lint-config-package \
+npm-run-all2 \
+publint \
+sort-package-json \
+svgo \
+vitepress
 ```
 
 ```bash
@@ -104,3 +109,167 @@ pipenv run picosvg --helpfull
 ```bash
 cat figma/icon/dribbble.svg && pipenv run picosvg figma/icon/dribbble.svg
 ```
+
+## Snippets
+
+### `Pipfile`
+
+```ini
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+picosvg = "==0.22.1"
+
+[dev-packages]
+black = "==23.10.0"
+
+[requires]
+python_version = "3.10"
+python_full_version = "3.10.13"
+```
+
+### `apply_picosvg.py` file
+
+```python
+# https://github.com/googlefonts/picosvg/blob/v0.22.1/setup.py#L25
+# https://github.com/googlefonts/picosvg/blob/v0.22.1/src/picosvg/picosvg.py#L74
+# https://github.com/googlefonts/picosvg/blob/v0.22.1/src/picosvg/picosvg.py#L46
+# https://stackoverflow.com/questions/50110800/python-pathlib-make-directories-if-they-don-t-exist
+# https://github.com/googlefonts/picosvg/blob/v0.22.1/src/picosvg/svg.py#L1332
+
+from pathlib import Path
+
+from picosvg.svg import SVG
+
+INPUT_PATH = Path("figma/icon")
+# OUTPUT_PATH = Path("figma/icon")
+OUTPUT_PATH = Path("picosvg")
+
+# https://bjango.com/articles/svgpassthroughprecision/#figma
+# https://bjango.com/articles/svgexports/
+# https://bjango.com/articles/svgpassthroughprecision/#other-tests
+# Figma:
+# SVG_EXPORT_PRECISION = 5
+# Maximum value found:
+SVG_EXPORT_PRECISION = 10
+
+if __name__ == "__main__":
+    OUTPUT_PATH.mkdir(parents=True, exist_ok=True)
+
+    for icon_path in INPUT_PATH.glob("*.svg"):
+        icon = SVG.parse(icon_path)
+
+        processed_icon = icon.topicosvg(
+            ndigits=SVG_EXPORT_PRECISION, allow_text=False, drop_unsupported=False
+        )
+
+        output_icon = processed_icon.tostring(pretty_print=True)
+
+        with open(OUTPUT_PATH / icon_path.name, "w") as f:
+            f.write(output_icon)
+
+        print(f"{icon_path} ✓")
+```
+
+### `package.json` file
+
+```json
+{
+  "scripts": {
+    "build:svgo": "svgo -f ./picosvg -o ./icons",
+    "build:picosvg": "pipenv run python apply_picosvg.py",
+    "build": "run-s build:picosvg build:svgo"
+  }
+}
+```
+
+### `README.md` file
+
+````markdown
+## Development
+
+### JS
+
+```bash
+fnm install && fnm use && node --version
+```
+
+```bash
+npm install
+```
+
+```bash
+npm run build
+```
+
+```bash
+npm pack --dry-run
+```
+
+### Python
+
+```bash
+pyenv install && pyenv versions
+```
+
+```bash
+pip install pipenv && pipenv --version
+```
+
+```bash
+pipenv install --dev --skip-lock
+```
+
+```bash
+pipenv run black apply_picosvg.py
+```
+
+## Deployment
+
+Update the [Social Media Icons file](https://www.figma.com/community/file/1098022441810511046) version in the README file (if necessary).
+
+```bash
+npm version patch
+```
+
+or
+
+```bash
+npm version minor
+```
+
+or
+
+```bash
+npm version major
+```
+
+```bash
+git push --follow-tags
+```
+
+or
+
+```bash
+npm version --no-git-tag-version patch
+```
+
+or
+
+```bash
+npm version --no-git-tag-version minor
+```
+
+or
+
+```bash
+npm version --no-git-tag-version major
+```
+
+Create a tag on [GitHub Desktop](https://github.blog/2020-05-12-create-and-push-tags-in-the-latest-github-desktop-2-5-release/).
+
+Check [GitHub](https://github.com/joaopalmeiro/social-media-icons/actions) and [npm](https://www.npmjs.com/package/social-media-icons).
+````

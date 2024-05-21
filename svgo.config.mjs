@@ -200,5 +200,39 @@ export default {
         collapseIntoOne: true,
       },
     },
+    // https://svgo.dev/docs/plugins/removeEmptyAttrs/
+    "removeEmptyAttrs",
+    // https://svgo.dev/docs/plugins/removeEmptyContainers/
+    "removeEmptyContainers",
+    // https://svgo.dev/docs/plugins/removeUnusedNS/
+    "removeUnusedNS",
+    // https://svgo.dev/docs/plugins/mergePaths/
+    // https://github.com/simple-icons/simple-icons/blob/11.15.0/svgo.config.mjs#L54
+    {
+      name: "mergePaths",
+      params: {
+        force: true,
+        floatPrecision: DEFAULT_FLOAT_PRECISION,
+        noSpaceAfterFlags: false,
+      },
+    },
+    // https://svgo.dev/docs/plugins/sortAttrs/
+    {
+      name: "sortAttrs",
+      params: {
+        xmlnsOrder: "front",
+      },
+    },
+    // https://svgo.dev/docs/plugins/sortDefsChildren/
+    "sortDefsChildren",
+    // https://svgo.dev/docs/plugins/removeTitle/
+    "removeTitle",
+    // https://svgo.dev/docs/plugins/removeDesc/
+    {
+      name: "removeDesc",
+      params: {
+        removeAny: true,
+      },
+    },
   ],
 };

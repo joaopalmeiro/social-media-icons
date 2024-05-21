@@ -1,44 +1,44 @@
 {
   "name": "social-media-icons",
   "version": "0.3.1",
+  "private": false,
   "description": "SVG files for social media icons.",
-  "scripts": {
-    "build": "svgo -f ./picosvg -o ./icons",
-    "docs:dev": "vitepress dev docs",
-    "docs:build": "vitepress build docs",
-    "docs:preview": "vitepress preview docs",
-    "lint": "run-s lint:pkgJson lint:publint",
-    "lint:pkgJson": "npmPkgJsonLint .",
-    "lint:publint": "publint --strict",
-    "format": "sort-package-json"
+  "homepage": "https://github.com/joaopalmeiro/social-media-icons",
+  "bugs": {
+    "url": "https://github.com/joaopalmeiro/social-media-icons/issues"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/joaopalmeiro/social-media-icons.git"
   },
+  "license": "MIT",
   "author": {
     "name": "João Palmeiro",
     "email": "joaopalmeiro@proton.me",
     "url": "https://github.com/joaopalmeiro"
   },
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/joaopalmeiro/social-media-icons/issues"
-  },
-  "homepage": "https://github.com/joaopalmeiro/social-media-icons",
   "files": [
     "icons/"
   ],
+  "scripts": {
+    "build": "svgo -f ./figma/icon -o ./icons",
+    "docs:build": "vitepress build docs",
+    "docs:dev": "vitepress dev docs",
+    "docs:preview": "vitepress preview docs",
+    "format": "sort-package-json",
+    "lint": "run-s lint:pkgJson lint:publint",
+    "lint:pkgJson": "npmPkgJsonLint .",
+    "lint:publint": "publint --strict"
+  },
   "devDependencies": {
-    "npm-package-json-lint-config-package": "0.1.0",
     "npm-package-json-lint": "7.1.0",
+    "npm-package-json-lint-config-package": "0.1.0",
     "npm-run-all2": "6.1.2",
     "publint": "0.2.7",
     "sort-package-json": "2.8.0",
     "svgo": "3.0.2",
     "vitepress": "1.0.0-rc.23"
   },
-  "private": false,
   "engines": {
     "node": ">=18.0.0"
   }

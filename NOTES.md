@@ -74,6 +74,10 @@
 - https://vitepress.dev/guide/mpa-mode
 - https://github.com/lucaong/minisearch/
 - [npm-stat](https://npm-stat.link/social-media-icons)
+- https://vitejs.dev/guide/features#glob-import:
+  - https://vitejs.dev/guide/features#custom-queries
+  - https://vitejs.dev/guide/features.html#static-assets
+- https://github.com/vituum/vituum
 
 ## Commands
 
@@ -129,6 +133,17 @@ rm -rf node_modules/ && npm install
 ```
 
 ## Snippets
+
+```ts
+const icons = import.meta.glob("../icons/*.svg", {
+  query: "?raw",
+  import: "default",
+});
+
+for (const iconImport in icons) {
+  console.log(`${iconImport}: ${await icons[iconImport]()}`);
+}
+```
 
 ### `Pipfile`
 

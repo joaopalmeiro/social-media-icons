@@ -47,4 +47,9 @@ export default defineConfig({
   cleanUrls: true,
   appearance: true,
   lastUpdated: true,
+  vite: {
+    server: {
+      open: true,
+    },
+  },
 });

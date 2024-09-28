@@ -68,6 +68,12 @@
 - https://github.com/edent/SuperTinyIcons
 - https://github.com/alrra/browser-logos
 - https://github.com/simple-icons/simple-icons/blob/11.15.0/package.json: `"keywords": [ "svg", "icons" ]`
+- https://vitepress.dev/guide/getting-started#setup-wizard
+- https://github.com/vuejs/vitepress/blob/v1.0.0-rc.23/docs/.vitepress/config.ts#L149
+- https://github.com/vuejs/vitepress/blob/main/CHANGELOG.md
+- https://vitepress.dev/guide/mpa-mode
+- https://github.com/lucaong/minisearch/
+- [npm-stat](https://npm-stat.link/social-media-icons)
 
 ## Commands
 

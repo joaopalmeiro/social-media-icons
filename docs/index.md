@@ -1,6 +1,7 @@
 ---
 layout: home
 titleTemplate: "SVG files for social media icons."
+
 hero:
   name: social-media-icons
   text: v0.3.0
@@ -15,6 +16,7 @@ hero:
     - theme: alt
       text: View on GitHub
       link: "https://github.com/joaopalmeiro/social-media-icons"
+
 features:
   - icon: 🌐
     title: Icons based on Material Design

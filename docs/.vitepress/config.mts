@@ -17,7 +17,6 @@ export default defineConfig({
         text: "Introduction",
         items: [{ text: "Getting Started", link: "/getting-started" }],
       },
-      // https://github.com/vuejs/vitepress/blob/v1.0.0-rc.23/docs/.vitepress/config.ts#L149
       { text: "Icons", link: "/icons" },
     ],
     socialLinks: [
@@ -25,6 +24,16 @@ export default defineConfig({
         icon: "github",
         link: "https://github.com/joaopalmeiro/social-media-icons",
         ariaLabel: "GitHub repo",
+      },
+      {
+        icon: "npm",
+        link: "https://www.npmjs.com/package/social-media-icons",
+        ariaLabel: "npm package",
+      },
+      {
+        icon: "mastodon",
+        link: "https://ciberlandia.pt/@joaopalmeiro",
+        ariaLabel: "Mastodon profile",
       },
     ],
     search: {
@@ -36,5 +45,6 @@ export default defineConfig({
     },
   },
   cleanUrls: true,
+  appearance: true,
   lastUpdated: true,
 });

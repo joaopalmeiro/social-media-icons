@@ -1,10 +1,7 @@
-<script setup>
-defineProps({
-    svgRaw: {
-        type: String,
-        required: true
-    },
-})
+<script setup lang="ts">
+defineProps<{
+    svgRaw: string
+}>()
 </script>
 
 <template>

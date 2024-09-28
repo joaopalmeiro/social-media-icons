@@ -145,6 +145,20 @@ for (const iconImport in icons) {
 }
 ```
 
+### `docs/components/Icon.vue` file
+
+```vue
+<script setup lang="ts">
+defineProps<{
+  svgRaw: string;
+}>();
+</script>
+
+<template>
+  <i v-html="svgRaw" />
+</template>
+```
+
 ### `Pipfile`
 
 ```ini

@@ -8,20 +8,18 @@ import instagram from "../icons/instagram.svg?raw";
 import linkedin from "../icons/linkedin.svg?raw";
 import mastodon from "../icons/mastodon.svg?raw";
 import npm from "../icons/npm.svg?raw";
-
-import Icon from "./components/Icon.vue";
 </script>
 
 # Icons
 
-| Preview                      | Name      | Filename        |
-| ---------------------------- | --------- | --------------- |
-| <Icon :svgRaw="behance" />   | Behance   | `behance.svg`   |
-| <Icon :svgRaw="dev" />       | DEV       | `dev.svg`       |
-| <Icon :svgRaw="discord" />   | Discord   | `discord.svg`   |
-| <Icon :svgRaw="dribbble" />  | Dribbble  | `dribbble.svg`  |
-| <Icon :svgRaw="github" />    | GitHub    | `github.svg`    |
-| <Icon :svgRaw="instagram" /> | Instagram | `instagram.svg` |
-| <Icon :svgRaw="linkedin" />  | LinkedIn  | `linkedin.svg`  |
-| <Icon :svgRaw="mastodon" />  | Mastodon  | `mastodon.svg`  |
-| <Icon :svgRaw="npm" />       | npm       | `npm.svg`       |
+| Preview                  | Name      | Filename        |
+| ------------------------ | --------- | --------------- |
+| <i v-html="behance" />   | Behance   | `behance.svg`   |
+| <i v-html="dev" />       | DEV       | `dev.svg`       |
+| <i v-html="discord" />   | Discord   | `discord.svg`   |
+| <i v-html="dribbble" />  | Dribbble  | `dribbble.svg`  |
+| <i v-html="github" />    | GitHub    | `github.svg`    |
+| <i v-html="instagram" /> | Instagram | `instagram.svg` |
+| <i v-html="linkedin" />  | LinkedIn  | `linkedin.svg`  |
+| <i v-html="mastodon" />  | Mastodon  | `mastodon.svg`  |
+| <i v-html="npm" />       | npm       | `npm.svg`       |

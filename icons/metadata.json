@@ -1,0 +1,20 @@
+[
+  {
+    "id": "behance",
+    "name": "Behance",
+    "source": "https://www.behance.net/",
+    "guidelines": null
+  },
+  {
+    "id": "dev",
+    "name": "DEV",
+    "source": "https://dev.to/brand",
+    "guidelines": "https://dev.to/brand"
+  },
+  {
+    "id": "discord",
+    "name": "Discord",
+    "source": "https://discord.com/branding",
+    "guidelines": "https://discord.com/branding"
+  }
+]

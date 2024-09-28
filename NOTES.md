@@ -134,6 +134,15 @@ rm -rf node_modules/ && npm install
 
 ## Snippets
 
+```json
+{
+  "id": "",
+  "name": "",
+  "source": "",
+  "guidelines": ""
+}
+```
+
 ```ts
 const icons = import.meta.glob("../icons/*.svg", {
   query: "?raw",

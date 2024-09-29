@@ -1,22 +1,3 @@
-export default {
-  plugins: [
-    "preset-default",
-    "cleanupListOfValues",
-    {
-      name: "removeAttrs",
-      params: {
-        attrs: "fill",
-      },
-    },
-    {
-      name: "addAttributesToSVGElement",
-      params: {
-        attributes: [
-          {
-            fill: "currentcolor",
-          },
-        ],
-      },
-    },
-  ],
-};
+import { FIGMA_SVGO_CONFIG } from "svgo-utils";
+
+export default FIGMA_SVGO_CONFIG;

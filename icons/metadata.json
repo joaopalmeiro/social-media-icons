@@ -132,45 +132,45 @@
     "guidelines": "https://telegram.org/tour/screenshots"
   },
   {
-    "id": "",
-    "name": "",
-    "source": "",
-    "guidelines": ""
+    "id": "tiktok",
+    "name": "TikTok",
+    "source": "https://tiktokbrandbook.com/document/3#/basics/logo",
+    "guidelines": "https://tiktokbrandbook.com/document/3#/basics/logo"
   },
   {
-    "id": "",
-    "name": "",
-    "source": "",
-    "guidelines": ""
+    "id": "tripadvisor",
+    "name": "Tripadvisor",
+    "source": "https://tripadvisor.mediaroom.com/logo-guidelines",
+    "guidelines": "https://tripadvisor.mediaroom.com/logo-guidelines"
   },
   {
-    "id": "",
-    "name": "",
-    "source": "",
-    "guidelines": ""
+    "id": "twitch",
+    "name": "Twitch",
+    "source": "https://brand.twitch.com/",
+    "guidelines": "https://brand.twitch.com/"
   },
   {
-    "id": "",
-    "name": "",
-    "source": "",
-    "guidelines": ""
+    "id": "typefully",
+    "name": "Typefully",
+    "source": "https://typefully.com/",
+    "guidelines": null
   },
   {
-    "id": "",
-    "name": "",
-    "source": "",
-    "guidelines": ""
+    "id": "whatsapp",
+    "name": "WhatsApp",
+    "source": "https://about.meta.com/brand/resources/whatsapp/whatsapp-brand",
+    "guidelines": "https://about.meta.com/brand/resources/whatsapp/whatsapp-brand"
   },
   {
-    "id": "",
-    "name": "",
-    "source": "",
-    "guidelines": ""
+    "id": "yelp",
+    "name": "Yelp",
+    "source": "https://www.yelp.com/brand",
+    "guidelines": "https://www.yelp.com/brand"
   },
   {
-    "id": "",
-    "name": "",
-    "source": "",
-    "guidelines": ""
+    "id": "youtube",
+    "name": "YouTube",
+    "source": "https://www.youtube.com/howyoutubeworks/resources/brand-resources/#logos-icons-and-colors",
+    "guidelines": "https://www.youtube.com/howyoutubeworks/resources/brand-resources/#logos-icons-and-colors"
   }
 ]

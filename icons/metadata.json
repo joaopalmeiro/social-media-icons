@@ -78,28 +78,28 @@
     "guidelines": "https://letterboxd.com/about/brand/"
   },
   {
-    "id": "",
-    "name": "",
-    "source": "",
-    "guidelines": ""
+    "id": "linkedin",
+    "name": "LinkedIn",
+    "source": "https://brand.linkedin.com/downloads",
+    "guidelines": "https://brand.linkedin.com/policies"
   },
   {
-    "id": "",
-    "name": "",
-    "source": "",
-    "guidelines": ""
+    "id": "mastodon",
+    "name": "Mastodon",
+    "source": "https://joinmastodon.org/branding",
+    "guidelines": "https://joinmastodon.org/branding"
   },
   {
-    "id": "",
-    "name": "",
-    "source": "",
-    "guidelines": ""
+    "id": "messenger",
+    "name": "Messenger",
+    "source": "https://about.meta.com/brand/resources/messenger/messenger-brand",
+    "guidelines": "https://about.meta.com/brand/resources/messenger/messenger-brand"
   },
   {
-    "id": "",
-    "name": "",
-    "source": "",
-    "guidelines": ""
+    "id": "npm",
+    "name": "npm",
+    "source": "https://github.com/npm/logos",
+    "guidelines": "https://github.com/npm/logos/blob/master/white-space-guidelines.png"
   },
   {
     "id": "",

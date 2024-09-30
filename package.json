@@ -22,10 +22,11 @@
     "url": "https://github.com/joaopalmeiro"
   },
   "files": [
-    "icons/"
+    "icons/*.svg",
+    "icons/metadata.json"
   ],
   "scripts": {
-    "build": "svgo -f ./figma/icon -o ./icons",
+    "build": "svgo -f ./icons/figma -o ./icons",
     "docs:build": "vitepress build docs",
     "docs:dev": "vitepress dev docs",
     "docs:preview": "vitepress preview docs",
